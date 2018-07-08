@@ -1,0 +1,1260 @@
+@charset "UTF-8";
+/**
+ * @此专题出自澎湃新闻网，http://thepaper.cn,
+ * @date    2015-12-10 12:00:00
+ *By jigl@thepaper.cn
+
+文字记者：   陈荣辉    吴艳洁    郑怡雯 
+摄影记者：   陈荣辉 
+视频剪辑：   顾一帆    张    登    王    辰 
+数据图表：   张泽红    吕    妍 
+项目统筹：   杨深来    郑    洁 
+页面设计：   张金伟    王国庆 
+页面制作：   季国亮
+ */
+ *{margin:0;padding:0;
+    font-family:"PingFang SC", "Hiragino Sans GB","Microsoft Yahei",sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+ }
+html,
+body{width: 100%;height:100%; margin: 0;}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.cl:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.main,
+.section{
+    position: relative;
+    width: 100%;height: 100%;
+}
+.ft-page,
+.ft-page-slider{
+  position: relative;
+  overflow: hidden;
+  background-color: #1E2021;
+}
+
+.chapter-box.hide,
+.ft-page.hide{
+  display: none;
+}
+.ft-page-digest{
+  background: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/digest.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+.ft-page-movie{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/images/ft-page-cover.jpg);
+}
+.ft-page-title{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 30%;
+  text-align: center;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.swiper-slide-active .show {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.title-wrap p:nth-child(2){
+  margin-top: 10px;
+}
+.nz-slogon{
+  position: absolute;
+  text-align: center;
+  top: 0;width: 100%;
+}
+.ft-page-logo{
+    position: absolute;
+    bottom: 6%;left: 50%;
+    margin-left: -25px;
+    width: 50px;height: 50px;
+    background: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/paper-logo.svg) center no-repeat;
+}
+.digest{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+    font-size:16px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(30, 32, 33, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+.digest p{
+    margin: 0 auto;
+    width: 80%;
+    opacity: 0;
+    font-size: 14px;
+    line-height: 1.6em;
+    -webkit-transform: translateY(150%);
+    transform: translateY(150%);
+    text-align: justify;
+    -webkit-transition:all 1s;
+    transition:all 1s;
+}
+.swiper-slide-active .digest p{
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.main-title,
+.ft-page-menu-list {
+  height: 100%;
+}
+.chapter-li {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  line-height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0,0,0,.8);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.chapter-li:after{
+  content:'';
+  display:block;
+  position:absolute;
+  left: 0;top:0;
+  width:100%;height:100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.chapter-li.active:after {
+  background-color:transparent;
+}
+.ft-page-menu-list > li:nth-child(1){
+    background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/chapter-li-1.jpg);
+}
+.ft-page-menu-list > li:nth-child(2){
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/chapter-li-2.jpg);
+}
+.ft-page-menu-list > li:nth-child(3){
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/chapter-li-3.jpg);
+}
+.ft-page-menu-list > li:nth-child(4){
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/chapter-li-4.jpg);
+}
+.chapter-li span{
+    display: inline-block;
+    width: 30%;
+    z-index: 20;
+}
+.chapter-li:nth-child(1){
+  -webkit-transform: rotateX(90deg); 
+  transform: rotateX(90deg); 
+  -webkit-transition-delay:0s;
+  transition-delay:0s;
+}
+.chapter-li:nth-child(2){
+  -webkit-transform: rotateX(90deg); 
+  transform: rotateX(90deg); 
+  -webkit-transition-delay:.5s;
+  transition-delay:.5s;
+}
+.chapter-li:nth-child(3){
+  -webkit-transform: rotateX(90deg); 
+  transform: rotateX(90deg); 
+  -webkit-transition-delay:1s;
+  transition-delay:1s;
+}
+.chapter-li:nth-child(4){
+  -webkit-transform: rotateX(90deg); 
+  transform: rotateX(90deg); 
+  -webkit-transition-delay:1.5s;
+  transition-delay:1.5s;
+}
+.swiper-slide-active .chapter-li{
+  -webkit-transform: rotateX(0deg); 
+  transform: rotateX(0deg); 
+}
+
+.chapter-li:nth-child(4){
+  -webkit-animation-delay:3s;
+  animation-delay:3s;
+}
+.ajax-loading{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    opacity: .85;
+    z-index: 100;
+}
+.ajax-loading.show{
+    display: block;
+}
+.chapter {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* topbar */
+.topbar {
+    display: none;
+    position: fixed;
+    bottom: 10px; right: 0; width: 100%; 
+    height: 40px; z-index: 30;
+}
+.topbar.show{
+    display: block;
+}
+.menudot {float: right; background-color: #00A498; width: 34px; height: 34px; margin-right: 20px; border-radius: 20px;}
+.menu {
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+    margin: 7px 0 0 7px;
+    background: transparent url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/menu.png) 0 0 no-repeat;
+    -webkit-background-size: auto 20px;
+    background-size: auto 20px;
+}
+.menu-active {-ms-background-position-x: -60px; background-position-x: -60px;}
+.nav {
+    position: absolute;
+    bottom: 60px;
+    left: 5%;
+    width: 90%;
+    background-color: rgba(0, 130, 150, 0.95);
+    list-style: none;
+    display: none;
+}
+.nav:after{
+  content:'';
+  display:block;
+  position: absolute;
+  bottom: -15px;
+  right: 12px;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid rgba(8, 131, 151, .95);
+}
+.nav-li{
+  font-size: 16px;
+  text-align: center;
+  }
+.nav-li.show{
+  background-color: rgba(0, 161, 149, 0.95); 
+}
+.nav-li span{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin:0 auto;
+  width: 18%;
+  padding: 11% 10% 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% auto;
+}
+.nav-li:nth-child(1) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-1.svg);
+}
+.nav-li:nth-child(2) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-2.svg);
+}
+.nav-li:nth-child(3) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-3.svg);
+}
+.nav-li:nth-child(4) > span{
+  border:none;
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-4.svg);
+}
+
+.nav-li.active:nth-child(1) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-1-a.svg);
+}
+.nav-li.active:nth-child(2) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-2-a.svg);
+}
+.nav-li.active:nth-child(3) > span{
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-3-a.svg);
+}
+.nav-li.active:nth-child(4) > span{
+  border:none;
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/assets/title-4-a.svg);
+}
+.nav-li img,
+.chapter-li img{
+  width: 100%;
+}
+.nav-li.active span{
+  color:white;
+}
+/*chapter style*/
+/* cover */
+.full-height{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden；
+}
+.bd1{
+  margin: 10px auto;
+  border-bottom: 1px dotted #ccc;
+  width: 75%;
+}
+.cover {text-align: center; margin: 0 auto;background-position:center center}
+.boarding .cover{background-image: url( ../image/ftpage/fenye1.jpg); -webkit-background-size: cover; background-size: cover;}
+.border .cover{background-image: url(  ../image/ftpage/fenye2.jpg); -webkit-background-size: cover; background-size: cover;}
+.newlife .cover{background-image: url( ../image/ftpage/fenye3.jpg); -webkit-background-size: cover; background-size: cover;}
+.future .cover{background-image: url( ../image/ftpage/fenye4.jpg); -webkit-background-size: cover; background-size: cover;}
+
+.cover h1 {color: #fff; font-size: 28px; font-weight: bolder;line-height: 20px;margin-top:30px;}
+.cover h1 span {display:block; margin-top: 10px; font-size: 14px;}
+.cover p { color: #fff; font-size: 12px;}
+.future p.article-disp {
+    color: #333;
+}
+.cover-title-box{
+	margin: 0;
+	padding: 0;
+}
+.article-disp{
+  overflow: hidden;
+	margin: 5px 0;
+}
+.title{
+ display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+.show {
+  -webkit-transform:translateY(0px);
+  transform:translateY(0px);
+}
+.cover-line{
+  margin:  2px 0;
+  width:100%;
+  border-top:1px solid white;
+}
+.cover-title-box{
+	margin: 0;
+	padding: 0;
+}
+
+.show .cover-line{
+  width:100%;
+}
+.article-disp span{  
+  display: inline-block;
+color: #ffffff;
+	margin: 0;
+}
+.show .article-disp span{
+}
+.future .article-author span{
+  border-top-color:#333;
+}
+.chapter4 .secwrap h2 {margin: 15px 20px;}
+.secwrap .tdesc strong {border-bottom: 1px solid #666;}
+.secwrap .doctor {font-weight: 700; margin-bottom: 10px;}
+.direction,
+.arrow
+ {
+    position: absolute; bottom: 15px; left: 50%; margin-left: -10px; width: 20px; height: 20px;
+    background: transparent url( ../image/title/direction.png) 0 -5px no-repeat;
+    -webkit-background-size: 20px; background-size: 20px;
+    animation:arrow-v infinite 1s ease alternate;
+    -webkit-animation:arrow-v infinite 1s ease alternate;
+}
+.arrow{
+    background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/direction1.png);
+}
+.graphic-caption{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*chapter cover*/
+.cover-info-box{
+   position: absolute;  
+   left: 50%;
+   top: 15%; 
+   width: 146px;
+   text-align: center;
+   z-index: 10;
+   color: white;
+   font-size: 14px;
+   margin-left: -73px;
+}
+.border .cover-info-box{
+  top: 27.5%;
+  left: 53%;
+}
+.newlife .cover-info-box{
+    top: 55%;
+}
+/* common content */
+.secwrap {margin: 40px 0 80px; color:#333;}
+.secwrap h2{margin: 30px 15px 15px;font-size: 22px;font-weight: bold;color:#383838;}
+.secwrap p { margin: 0 25px;}
+.secwrap h4 {
+    font-size: 24px; font-weight: normal; text-align: center;
+    margin:60px 5% 20px;
+}
+.secwrap h4:first-child {
+    margin-top: 0;
+}
+.secwrap h4 span {
+    display: inline-block; padding: 0 30px 10px;
+    background: transparent url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/line.png) left bottom no-repeat;
+    -webkit-background-size: auto 9px;
+    background-size: auto 9px;
+}
+.secwrap p{ margin-bottom:10px; font-size:16px; line-height: 1.7em; text-align:justify;}
+.secwrap p:last-child{margin-bottom:0;}
+p.btn-next {
+  font-size: 14px;
+  color: #FFF;
+  padding: 5px 7px;
+  background-color: #666;
+  box-sizing: border-box;
+}
+p.digest-bs{
+    margin: 30px 15px 20px;
+    border-bottom: 7px double rgba(14, 19, 33, 0.1);
+}
+blockquote {margin-bottom: 50px;}
+.secwrap blockquote p {color: #666; font-size: 15px;}
+.secwrap .fullrow {width: 100%; margin:0; font-size: 14px; line-height: 1.4em; color: #333; margin-bottom: 20px;}
+.fullrow p {padding: 10px 6%; margin: 0; color: #666; font-size:14px; line-height: 1.2em; border-bottom: 1px solid rgba(198,198,198,0.5);}
+.secwrap .fullrow img {width:100%; vertical-align: top;}
+
+.title-sec {padding: 0 6%;}
+.title-sec blockquote {padding: 50px 0; border-bottom: 1px solid #000; font-size: 16px;}
+.title-sec blockquote p {font-size: 16px; line-height: 28px;}
+.tar {text-align: right; margin-top: 1em;}
+.imgtitle {height: 60vh; position: relative;}
+.secwrap .title-sec h2 {margin: 50px 0; text-align: center; font-weight: normal;}
+
+.qwrap {
+    background: transparent url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/icon-qt.png) 15px top no-repeat;
+    -webkit-background-size: 25px 25px;
+    background-size: 25px 25px;
+    padding-left: 45px;
+}
+.qwrap blockquote {
+    background: transparent url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/icon-qb.png) calc(100% - 15px) bottom no-repeat;
+    -webkit-background-size: 25px 25px;
+    background-size: 25px 25px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+.qwrap blockquote p {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+.secwrap .signinfo {font-size: 14px; font-weight: 700; margin-left: 44px; margin-right: 40px; width: auto;}
+
+/* ipad */
+@media only screen and (min-device-width : 750px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.full-height{
+  position:relative;
+  width:100vw;
+  height:100%;
+  overflow:hidden；
+}
+
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        width:100%; margin: 0 auto;
+    }
+}
+/* arrow-horizontal */
+@-webkit-keyframes arrow-v{
+    0% {opacity:0.6; background-position: 0 0px;}
+    100% {opacity:1; background-position: 0 5px;}
+}
+@keyframes arrow-v{
+    0% {opacity:0.6; background-position: 0 0;}
+    100% {opacity:1; background-position: 0 5px;}
+}
+
+@-webkit-keyframes movie{
+    from{background-position:0 0;}
+    to{background-position:0 -10664px}
+}
+@keyframes movie{
+    from{background-position:0 0;}
+    to{background-position:0 -10664px}
+}
+
+/*swiper style*/
+.side-pic-box,
+.paper-video-box,
+.paper-slides-box{ 
+  margin: 25px 0;
+}
+.swiper-container {
+  position: relative;
+  padding-bottom: 7px;
+  overflow: hidden;/* Fix of Webkit flickering */
+  z-index: 1;
+  border-bottom: 1px dotted #ccc;
+}
+.swiper-container-no-flexbox .swiper-slide {
+  float: left;
+}
+.swiper-container-vertical > .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  -webkit-transform: translate3d(0px, 0, 0);
+  -moz-transform: translate3d(0px, 0, 0);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
+}
+.swiper-container-multirow > .swiper-wrapper {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-slide {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  flex-shrink: 0;
+  position: relative;
+}
+.swiper-pic {width: 100%; overflow: hidden;}
+.swiper-pic img {width: 100%;}
+.secwrap .slide-notes {
+  height:100px;
+  font-size:13px;
+  line-height: 1.5em;
+  margin-bottom:0;
+  color: #333;
+  text-align:justify;
+}
+.secwrap .tuji .slide-notes {color: #fff; margin-top: 5px;}
+/* a11y */
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
+}
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x;
+}
+/* Pagination Styles */
+.swiper-pagination {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0;
+}
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+}
+.swiper-container-horizontal > .swiper-pagination {
+	left: -1px;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 3px;
+}
+/* Preloader */
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  -webkit-transform-origin: 50%;
+  -moz-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  -moz-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  animation: swiper-preloader-spin 1s steps(12, end) infinite;
+}
+.swiper-lazy-preloader:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/loading.gif);
+  background-position: 50%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+p.media-caption,
+.paper-video-box .media-caption,
+.slide-caption.media-caption,
+.album11 .slide-caption.media-caption p,
+.musician p
+{
+  margin: 5px 15px 0;
+  font-size: 13px;
+  text-align: justify;
+  line-height: 1.5em;
+  color:#666;
+}
+.musician .media-caption > p:nth-child(1),
+.album11 .media-caption > p:nth-child(1){
+    font-weight: bold;
+    color: #333;
+}
+.paper-video{
+  position: relative;
+}
+.paper-video:before{
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+.paper-video video{
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+}
+.video-cover{
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;height: 100%;
+  z-index: 20;
+}
+.video-cover img{
+  width: 100%;
+}
+.play-icon{
+  position: absolute;
+  left: 50%;top: 50%;
+  margin:-25px 0 0 -25px;
+  width: 50px;height: 50px;
+  background: url(file:///Macintosh%20HD/Users/liuyichen/assets/play_white.png) no-repeat center;
+  background-size: 50px auto;
+}
+/*foot section*/
+.section-foot{
+   margin-bottom: 20px;
+}
+.foot-container{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.footer-title {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+.footer-title h2 {
+  position: relative;
+  top: 10px;
+  padding: 16px;
+  display: inline;
+  font-size: 16px;
+  background-color:white;
+}
+.footer p {
+  margin-left: -25%;
+  font-size: 14px;
+  line-height: 2;
+  color: #555;
+}
+.footer span {
+  display: inline-table;
+  width: 49%;
+}
+.sign-title {
+  text-align: right;
+}
+.sign-name {
+  text-align: left;
+}
+/*border-slide*/
+.border-box{
+  position: relative;
+  height: 100%;
+  background: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-bg.jpg) center top;
+  background-size: 100% auto;
+}
+.refugee-route-bt{
+  position: absolute;
+  left: 0;bottom: 12%;
+  width: 100%;
+}
+.full-route-map .refugee-route-bt{
+    bottom: 5%;
+  
+}
+.route-caption{
+  margin-left: 10px;
+  color:#333;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.refugee-routes{
+  position: relative;
+  height: 100%;
+  background-image: url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-0.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+.refugee-routes.hide{
+  background:none;
+}
+.refugee-route{
+  display: none;
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;height: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.route-1{
+  background-image:url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-1.png);
+}
+.route-2{
+  background-image:url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-2.png);
+}
+.route-3{
+  background-image:url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-3.png);
+}
+.route-4{
+  background-image:url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-4.png);
+}
+.route-5{
+  background-image:url(file:///Macintosh%20HD/Users/liuyichen/Downloads/%E6%B1%9F%E6%B2%B3%E8%AE%B0%E5%BE%97%E6%88%91mobi/route-5.png);
+}
+.route-1.show,
+.route-2.show,
+.route-3.show,
+.route-4.show,
+.route-5.show{
+  display: block;
+}
+.route-btns{
+  width:100%;
+  text-align: center;
+}
+.route-btns p{
+  float:left;
+  width:20%;
+}
+.active .route-pagination-bullet{
+  background-color: #fbab3b;
+}
+.route-pagination-bullet{
+  display: block;
+  margin: 1px;
+  font-size: 12px;
+  background-color:white;
+  padding: 6px 0;
+}
+/*compare slide*/
+.compare-slide-box{
+  margin:25px 0;
+}
+.compare-container{
+  padding-bottom: 7px;
+  width: 100%;
+  border-bottom: 1px dotted #ccc;
+  overflow: hidden;
+}
+.compare-wrapper{
+  width: 300%;
+  -webkit-transition:transform .5s;
+  transition:transform .5s;
+}
+.compare-slide{
+  float: left;
+  width: 33.333%;
+}
+.compare-btns{
+  text-align: center;
+}
+.compare-btn,.route-btn{
+  display: inline-block;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  background: url( ../image/compare-arrows.png) no-repeat;
+  background-size: 30px auto;
+}
+.compare-btn.hide,.route-btn.hide{
+  opacity: .1;
+}
+.compare-prev,.route-btn-prev{
+  background-position: 0 -30px;
+}
+.compare-next{
+
+}
+.compare-pagination,.route-pagination{
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  margin:5px;
+}
+.compare-pagination-bullet{
+    display: inline-block;
+    margin: 0 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    border: 1px solid #f6ab3b;
+}
+.compare-pagination-bullet.active,
+.route-pagination-bullet.active{
+  background-color:#f6ab3b;
+}
+.twentytwenty-wrapper.twentytwenty-horizontal {
+    height: 100%;
+}
+/*footer*/
+.footer-nav{
+  margin: 30px auto;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.footer-nav li{
+  font-weight: bolder;
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+}
+li.footer-nav-li{
+  width: 45px;
+  background-color: #333;
+}
+.footer-nav-li:hover,
+.footer-nav li.active{
+}
+.footer-nav-li span{
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    font-size: 14px;
+}
+.footer-nav-li{
+}
+.footer-nav li:hover span, .footer-nav li.active{
+  background-color: #00a498;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+@-webkit-keyframes chapter-li-tip{
+  0%{
+    -webkit-transform:scale(1);
+  }
+  100%{
+    -webkit-transform:scale(0.9);
+  }
+}
+@keyframes chapter-li-tip{
+  0%{
+    transform:scale(1);
+  }
+  100%{
+    transform:scale(0.9);
+  }
+}
+
+
+
+<style type='text/css'> width: 100%;
+@-webkit-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-ms-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-o-keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes uil-flickr-anim1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0;
+  }
+}
+width: 100%;
+@-webkit-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-webkit-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-moz-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-ms-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-moz-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-webkit-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@-o-keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+@keyframes uil-flickr-anim2 {
+  0% {
+    left: 100px;
+    z-index: 1;
+  }
+  49% {
+    z-index: 1;
+  }
+  50% {
+    left: 0;
+    z-index: 10;
+  }
+  100% {
+    left: 100px;
+    z-index: 10;
+  }
+}
+.uil-flickr-css {
+  -webkit-transform: scale(0.25) translateX(-69px);
+  transform: scale(0.25) translateX(-69px);
+}
+.uil-flickr-css > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+}
+.uil-flickr-css > div:nth-of-type(1) {
+  left: 0;
+  background: #00a195;
+  z-index: 5;
+  -ms-animation: uil-flickr-anim1 1s linear infinite;
+  -moz-animation: uil-flickr-anim1 1s linear infinite;
+  -webkit-animation: uil-flickr-anim1 1s linear infinite;
+  -o-animation: uil-flickr-anim1 1s linear infinite;
+  animation: uil-flickr-anim1 1s linear infinite;
+}
+.uil-flickr-css > div:nth-of-type(2) {
+  left: 100px;
+  background: #f6ab3b;
+  -ms-animation: uil-flickr-anim2 1s linear infinite;
+  -moz-animation: uil-flickr-anim2 1s linear infinite;
+  -webkit-animation: uil-flickr-anim2 1s linear infinite;
+  -o-animation: uil-flickr-anim2 1s linear infinite;
+  animation: uil-flickr-anim2 1s linear infinite;
+}
